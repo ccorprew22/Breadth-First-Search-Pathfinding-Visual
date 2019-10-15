@@ -1,4 +1,4 @@
-# Breadth First Search Pathfinding-Visual
+# Breadth First Search Pathfinding Visual
 
 This is my personal project where I attempt to create a visualization of the breadth first search pathfinding algorithm. I created a grid where the user can click to select a starting node, an ending node, and some walls. After hitting play, the grid will update and show its step by step process of searching the grid until it finds the ending node. Once the end node is found, it will show all the checked nodes and the fastest route. 
 
