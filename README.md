@@ -7,6 +7,9 @@ This is my personal project where I attempt to create a visualization of the bre
 The BFS Algorithm is an algorithm that traverses an entire of level of children nodes starting from the root node. When the entire level is accounted for, the next level is traversed. When it comes to pathfinding, every possible move starting from the initial node is checked and stored until the end node is found. Then the shortest list of movements is returned.
 
 # Controls:
-+ Press 'S', 'E', 'W', or 'P' keys to change the status of the node to Start, End, Wall, and Play respectively 
++ Press 'S', 'E', 'W', or 'P' keys to change the status of the node to Start, End, Wall, and Play respectively.
++ While you can pick more than one starting and ending node, the code will only operate with the most recent starting and ending nodes.
++ Currently does not accept the possibility of no potential route.
+
 
 ![](BFS.gif)
