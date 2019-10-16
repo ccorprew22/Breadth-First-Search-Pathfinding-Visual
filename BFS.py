@@ -221,27 +221,30 @@ while not done:
                         new_nodes = place_holder
                         count += 1
         if status == 'BFS': #SR SC
-            #print(movelst[0])
-            #while inc < len(movelst):
-            #print(movelst[0][inc])
-            if movelst[inc] == 'L':
-                SC -= 1
-                grid[SR][SC] = 5
-            elif movelst[inc] == 'R':
-                SC += 1
-                grid[SR][SC] = 5
+            GO = pygame.USEREVENT+2
+            pygame.time.set_timer(GO, 100)
+            if event.type == GO:
+                #print(movelst[0])
+                #while inc < len(movelst):
+                #print(movelst[0][inc])
+                if movelst[inc] == 'L':
+                    SC -= 1
+                    grid[SR][SC] = 5
+                elif movelst[inc] == 'R':
+                    SC += 1
+                    grid[SR][SC] = 5
 
-            elif movelst[inc] == 'U':
-                SR -= 1
-                grid[SR][SC] = 5
+                elif movelst[inc] == 'U':
+                    SR -= 1
+                    grid[SR][SC] = 5
 
-            elif movelst[inc] == 'D':
-                SR += 1
-                grid[SR][SC] = 5
-            inc += 1
-            if inc == len(movelst):
-                status = 'start'
-                break
+                elif movelst[inc] == 'D':
+                    SR += 1
+                    grid[SR][SC] = 5
+                inc += 1
+                if inc == len(movelst):
+                    status = 'start'
+                    
     screen.fill(black)
    
 
