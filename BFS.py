@@ -111,7 +111,7 @@ for row in range(rows):
         columns.append(0)
     grid.append(columns)
 
-
+inc = 0
 sCol = 0
 sRow = 0
 pygame.init()
@@ -174,7 +174,7 @@ while not done:
                 eCol = colum
         elif status == 'play':
                 PLAY = pygame.USEREVENT+1
-                pygame.time.set_timer(PLAY, 400)
+                pygame.time.set_timer(PLAY, 100)
                 if event.type == PLAY:
                     if len(new_nodes) == 0: 
                         nodes = findMove(grid, sRow, sCol, eRow, eCol, movelst) #returns list of moves. CREATE FOR LOOP TO RUN THROUGH EACH SUB LIST
@@ -221,26 +221,27 @@ while not done:
                         new_nodes = place_holder
                         count += 1
         if status == 'BFS': #SR SC
-            inc = 0
             #print(movelst[0])
-            while inc < len(movelst):
-                #print(movelst[0][inc])
-                if movelst[inc] == 'L':
-                    SC -= 1
-                    grid[SR][SC] = 5
-                elif movelst[inc] == 'R':
-                    SC += 1
-                    grid[SR][SC] = 5
+            #while inc < len(movelst):
+            #print(movelst[0][inc])
+            if movelst[inc] == 'L':
+                SC -= 1
+                grid[SR][SC] = 5
+            elif movelst[inc] == 'R':
+                SC += 1
+                grid[SR][SC] = 5
 
-                elif movelst[inc] == 'U':
-                    SR -= 1
-                    grid[SR][SC] = 5
+            elif movelst[inc] == 'U':
+                SR -= 1
+                grid[SR][SC] = 5
 
-                elif movelst[inc] == 'D':
-                    SR += 1
-                    grid[SR][SC] = 5
-                inc += 1
-            status = 'start'
+            elif movelst[inc] == 'D':
+                SR += 1
+                grid[SR][SC] = 5
+            inc += 1
+            if inc == len(movelst):
+                status = 'start'
+                break
     screen.fill(black)
    
 
@@ -269,6 +270,7 @@ while not done:
 
 
 pygame.quit()
+
 
 
 
