@@ -13,3 +13,5 @@ The BFS Algorithm is an algorithm that traverses an entire of level of children 
 
 
 ![](BFS.gif)
+
+![](BFS2.gif)
