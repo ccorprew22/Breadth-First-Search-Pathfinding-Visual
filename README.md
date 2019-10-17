@@ -11,7 +11,8 @@ The BFS Algorithm is an algorithm that traverses an entire of level of children 
 + While you can pick more than one starting and ending node, the code will only operate with the most recent starting and ending nodes.
 + Currently does not accept the possibility of no potential route.
 
-
+# Test 1
 ![](BFS.gif)
 
+# Test 2
 ![](BFS2.gif)
